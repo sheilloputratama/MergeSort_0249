@@ -9,12 +9,23 @@ void input() {
     while (true) {
         cout << "Enter the number of elements in the array: ";
         cin >> n;
-        if (n <= 20) break;
-        else cout << "Please enter a number less than or equal to 20." << endl;
+        if (n <= 20)
+        {
+         break;
+        }
+        else
+        {
+        cout << "Please enter a number less than or equal to 20." << endl;
+        }
     }
 
-    cout << "Enter the elements of the array: ";
-    for (int i = 0; i < n; i++) {
+    cout << "\n-------------------------- " << endl;
+    cout << "\nInputkan isi element array" << endl;
+    cout << "\n-------------------------- " << endl;
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << "array index ke- " << i << " : ";
         cin >> arr[i];
     }
 }
@@ -50,7 +61,7 @@ void mergesort(int low, int high) { // Step 1
     while (j <= high) { // Step 4.e
         B[k] = arr[j]; 
         j++; 
-        k++; 
+        k = k + 1; 
     }
 
     while (i <= mid) { // Step 4.f
@@ -66,4 +77,19 @@ for (int x = low; x <= high; x++) {
 
 
 }
+void output() 
+{
+    cout << "\nData setelah diurutkan (merge sort): ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+} 
 
+int main()
+{
+    input();
+    mergesort(0, n - 1);
+    output();
+}
