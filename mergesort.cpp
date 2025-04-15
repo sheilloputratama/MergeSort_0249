@@ -31,4 +31,9 @@ void mergesort(int low, int high) { // Step 1
     mergesort(low, mid); // Step 3.a
     mergesort(mid + 1, high); // Step 3.b
 
-    
+    // Step 4
+    int i = low; // Step 4.a
+    int j = mid + 1; // Step 4.b
+    int k = low; // Step 4.c
+
+  
