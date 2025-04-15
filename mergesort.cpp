@@ -13,4 +13,8 @@ void input() {
         else cout << "Please enter a number less than or equal to 20." << endl;
     }
 
-    
+    cout << "Enter the elements of the array: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+}
